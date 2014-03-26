@@ -1,0 +1,6 @@
+<?php
+return array(
+  'url_base' => 'http://localhost/xhprof.io/',
+  'url_static' => null, // When undefined, it defaults to $config['url_base'] . 'public/'. This should be absolute URL.
+  'pdo' => new PDO('mysql:dbname=xhprof_io;host=<%= node[:db][:host] %>;charset=utf8', '<%= node[:db][:root] %>', '<%= node[:mysql][:server_root_password] %>'),
+);

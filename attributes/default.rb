@@ -19,3 +19,9 @@
 
 default[:drupal_developer][:xdebug] = false
 default[:drupal_developer][:phpmyadmin] = false
+
+if node[:drupal][:server][:base].nil?
+  default[:drupal_developer][:server_base] = '/srv/www/'
+else
+  default[:drupal_developer][:server_base] = node[:drupal][:server][:base]
+end
