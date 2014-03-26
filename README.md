@@ -6,6 +6,8 @@ This cookbook adds developer friendly tools for the drupal-lamp project.
 Requirements
 ------------
 
+This cookbook is designed to work with drupal-lamp https://github.com/newmediadenver/drupal-lamp
+
 ### Platform:
 
 Ubuntu
@@ -32,6 +34,22 @@ Adds and configures xdebug php extension
 #### drupal-developer::phpmyadmin
 
 Adds phpmyadmin
+
+Usage
+-----
+To get it working with drupal-lamp:
+* Open Berksfile in your drupal-lamp directory and place the following line in there
+````
+cookbook "drupal-developer", git: "https://github.com/arknoll/drupal-developer", branch: "master"
+````
+* Open chef/roles/drupal_lamp.rb in your drupal-lamp directory and add "recipe[drupal-developer]", to the end of env_run_lists run list array
+
+* Add and configure the attributes above to your drupal_lamp.json file.
+
+* run either 'vagrant up' or 'vagrant provision'
+
+#### phpmyadmin
+When phpmyadmin is set to true, phpmyadmin will be installed on your server. To access phpmyadmin go to your site's url/phpmyadmin. You will be able to login to phpmyadmin with the username and password found in chef/data_bags/users/mysql.json
 
 Testing
 -------
