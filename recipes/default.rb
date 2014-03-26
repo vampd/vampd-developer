@@ -24,3 +24,11 @@ end
 unless node[:drupal_developer][:phpmyadmin].nil?
   include_recipe 'drupal-developer::phpmyadmin'
 end
+
+unless node[:drupal_developer][:xhprof].nil?
+  include_recipe 'drupal-developer::xhprof'
+end
+
+unless node[:drupal_developer][:xhprof_io].nil?
+  include_recipe 'drupal-developer::xhprof.io'
+end
