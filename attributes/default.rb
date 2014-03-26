@@ -17,4 +17,5 @@
 # limitations under the License.
 #
 
-# Set meaningful node attributes here
+default[:drupal_developer][:xdebug] = false
+default[:drupal_developer][:phpmyadmin] = false

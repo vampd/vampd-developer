@@ -17,5 +17,10 @@
 # limitations under the License.
 #
 
-# Install/configure something here
-include_recipe 'drupal-developer::xdebug'
+unless node[:drupal_developer][:xdebug].nil?
+  include_recipe 'drupal-developer::xdebug'
+end
+
+unless node[:drupal_developer][:phpmyadmin].nil?
+  include_recipe 'drupal-developer::phpmyadmin'
+end

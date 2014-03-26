@@ -16,12 +16,22 @@ php
 
 Attributes
 ----------
-
+````
+"drupal_developer" {
+  "xdebug": false,
+  "phpmyadmin": false
+}
+````
 
 Recipes
 -------
+#### drupal-developer::xdebug
 
+Adds and configures xdebug php extension
 
+#### drupal-developer::phpmyadmin
+
+Adds phpmyadmin
 
 Testing
 -------
