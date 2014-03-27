@@ -7,3 +7,4 @@ version          "0.1.0"
 recipe           "drupal-developer::default", "Installs/configures something"
 
 depends 'php'
+depends 'chef-percona'

@@ -32,3 +32,7 @@ end
 unless node[:drupal_developer][:xhprof_io].nil?
   include_recipe 'drupal-developer::xhprof.io'
 end
+
+unless node[:drupal_developer][:percona_toolkit].nil?
+  include_recipe 'drupal-developer::perconatoolkit'
+end

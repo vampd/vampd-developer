@@ -21,6 +21,7 @@ default[:drupal_developer][:xdebug] = false
 default[:drupal_developer][:phpmyadmin] = false
 default[:drupal_developer][:xhprof] = false
 default[:drupal_developer][:xhprof_io] = false
+default[:drupal_developer][:percona_toolkit] = false
 
 if node[:drupal][:server][:base].nil?
   default[:drupal_developer][:server_base] = '/srv/www'
