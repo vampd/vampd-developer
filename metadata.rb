@@ -3,8 +3,8 @@ maintainer       "Alex Knoll"
 maintainer_email "arknoll@gmail.com"
 license          "Apache 2.0"
 description      "Installs/configures developer friendly tools"
-version          "0.1.0"
+version          "0.2.0"
 recipe           "drupal-developer::default", "Installs/configures something"
+recipe           "drupal-developer::codesniff", "Install php and drupal codesniffs"
 
 depends 'php'
-depends 'chef-percona'
