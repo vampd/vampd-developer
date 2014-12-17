@@ -28,3 +28,5 @@ if node[:drupal][:server][:base].nil?
 else
   default[:drupal_developer][:server_base] = node[:drupal][:server][:base]
 end
+
+default[:drupal_developer][:codesniff_user] = 'root'
