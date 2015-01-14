@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: drupal-developer
+# Cookbook Name:: vampd-developer
 # Recipe:: default
 #
-# Copyright (C) 2014 Alex Knoll <arknoll@gmail.com>
+# Copyright (C) 2014 Alex Knoll <arknoll@gmail.com>, Tim Whitney <tim.d.whitney@gmail.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,22 +17,34 @@
 # limitations under the License.
 #
 
-unless node[:drupal_developer][:xdebug].nil?
-  include_recipe 'drupal-developer::xdebug'
+unless node[:vampd_developer][:xdebug].nil?
+  include_recipe 'vampd-developer::xdebug'
 end
 
-unless node[:drupal_developer][:phpmyadmin].nil?
-  include_recipe 'drupal-developer::phpmyadmin'
+unless node[:vampd_developer][:phpmyadmin].nil?
+  include_recipe 'vampd-developer::phpmyadmin'
 end
 
-unless node[:drupal_developer][:xhprof].nil?
-  include_recipe 'drupal-developer::xhprof'
+unless node[:vampd_developer][:xhprof].nil?
+  include_recipe 'vampd-developer::xhprof'
 end
 
-unless node[:drupal_developer][:xhprof_io].nil?
-  include_recipe 'drupal-developer::xhprof.io'
+unless node[:vampd_developer][:xhprof_io].nil?
+  include_recipe 'vampd-developer::xhprof.io'
 end
 
-unless node[:drupal_developer][:percona_toolkit].nil?
-  include_recipe 'drupal-developer::perconatoolkit'
+unless node[:vampd_developer][:percona_toolkit].nil?
+  include_recipe 'vampd-developer::perconatoolkit'
+end
+
+unless node[:vampd_developer][:percona_toolkit].nil?
+  include_recipe 'vampd-developer::perconatoolkit'
+end
+
+unless node[:vampd_developer][:copy].nil?
+  include_recipe 'vampd-developer::copy'
+end
+
+unless node[:vampd_developer][:user_groups].nil?
+  include_recipe 'vampd-developer::user_groups'
 end

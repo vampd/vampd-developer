@@ -1,5 +1,5 @@
 # Install xhprof.io
-git "#{node[:drupal_developer][:server_base]}/xhprof.io" do
+git "#{node[:vampd_developer][:server_base]}/xhprof.io" do
   repository 'https://github.com/gajus/xhprof.io.git'
   reference 'master'
   action :sync
@@ -44,13 +44,13 @@ template '/etc/php5/conf.d/xhprof.io.ini' do
   notifies :restart, 'service[apache2]', :delayed
 end
 
-file "#{node[:drupal_developer][:server_base]}/xhprof.io/xhprof/includes/config.inc.php" do
+file "#{node[:vampd_developer][:server_base]}/xhprof.io/xhprof/includes/config.inc.php" do
   action :delete
   notifies :restart, 'service[apache2]', :delayed
   only_if { File.exists?('/etc/php5/conf.d/xhprof.io.ini') }
 end
 
-template "#{node[:drupal_developer][:server_base]}/xhprof.io/xhprof/includes/config.inc.php" do
+template "#{node[:vampd_developer][:server_base]}/xhprof.io/xhprof/includes/config.inc.php" do
   source 'xhprof.io.config.erb'
   mode '0644'
   notifies :restart, 'service[apache2]', :delayed

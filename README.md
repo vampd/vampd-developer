@@ -19,7 +19,7 @@ php
 Attributes
 ----------
 ````
-"drupal_developer" {
+"vampd_developer" {
   "xdebug": false,
   "phpmyadmin": false
 }
@@ -34,6 +34,17 @@ Adds and configures xdebug php extension
 #### drupal-developer::phpmyadmin
 
 Adds phpmyadmin
+
+#### drupal-developer::copy
+
+Copies files from a src to a destination
+```
+"vampd_developer": {
+    "copy": {
+        "/vagrant/,gitconfig": "/root/.gitconfig"
+    }
+}
+```
 
 Usage
 -----
