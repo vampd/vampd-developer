@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-username = node[:drupal_developer][:codesniff_user]
+username = node[:vampd_developer][:codesniff_user]
 
 home = Dir.home(username)
 
