@@ -57,6 +57,15 @@ Puts users in groups.
 }
 ```
 
+#### vampd-developer::zsh
+Adds zsh for the root user.
+```
+"vampd_developer": {
+    "zsh": true
+}
+```
+
+
 Usage
 -----
 To get it working with drupal-lamp:
