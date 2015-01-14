@@ -41,7 +41,7 @@ Copies files from a src to a destination
 ```
 "vampd_developer": {
     "copy": {
-        "/vagrant/,gitconfig": ["/root/.gitconfig", "/home/vagrant/.gitconfig"]
+        "/vagrant/.gitconfig": ["/root/.gitconfig", "/home/vagrant/.gitconfig"]
     }
 }
 ```
