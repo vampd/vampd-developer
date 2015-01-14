@@ -17,34 +17,3 @@
 # limitations under the License.
 #
 
-unless node[:vampd_developer][:xdebug].nil?
-  include_recipe 'vampd-developer::xdebug'
-end
-
-unless node[:vampd_developer][:phpmyadmin].nil?
-  include_recipe 'vampd-developer::phpmyadmin'
-end
-
-unless node[:vampd_developer][:xhprof].nil?
-  include_recipe 'vampd-developer::xhprof'
-end
-
-unless node[:vampd_developer][:xhprof_io].nil?
-  include_recipe 'vampd-developer::xhprof.io'
-end
-
-unless node[:vampd_developer][:percona_toolkit].nil?
-  include_recipe 'vampd-developer::perconatoolkit'
-end
-
-unless node[:vampd_developer][:percona_toolkit].nil?
-  include_recipe 'vampd-developer::perconatoolkit'
-end
-
-unless node[:vampd_developer][:copy].nil?
-  include_recipe 'vampd-developer::copy'
-end
-
-unless node[:vampd_developer][:user_groups].nil?
-  include_recipe 'vampd-developer::user_groups'
-end
