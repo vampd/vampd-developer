@@ -48,3 +48,7 @@ end
 unless node[:vampd_developer][:user_groups].nil?
   include_recipe 'vampd-developer::user_groups'
 end
+
+unless node[:vampd_developer][:zsh].nil?
+  include_recipe 'vampd-developer::zsh'
+end
