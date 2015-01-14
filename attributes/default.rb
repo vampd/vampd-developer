@@ -28,3 +28,7 @@ if node[:drupal][:server][:base].nil?
 else
   default[:vampd_developer][:server_base] = node[:drupal][:server][:base]
 end
+
+default[:vampd_developer][:copy] = {}
+default[:vampd_developer][:user_groups] = {}
+default[:vampd_developer][:zsh] = false
