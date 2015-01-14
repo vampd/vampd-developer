@@ -17,16 +17,16 @@
 # limitations under the License.
 #
 
-default[:drupal_developer][:xdebug] = false
-default[:drupal_developer][:phpmyadmin] = false
-default[:drupal_developer][:xhprof] = false
-default[:drupal_developer][:xhprof_io] = false
-default[:drupal_developer][:percona_toolkit] = false
+default[:vampd_developer][:xdebug] = false
+default[:vampd_developer][:phpmyadmin] = false
+default[:vampd_developer][:xhprof] = false
+default[:vampd_developer][:xhprof_io] = false
+default[:vampd_developer][:percona_toolkit] = false
 
 if node[:drupal][:server][:base].nil?
-  default[:drupal_developer][:server_base] = '/srv/www'
+  default[:vampd_developer][:server_base] = '/srv/www'
 else
-  default[:drupal_developer][:server_base] = node[:drupal][:server][:base]
+  default[:vampd_developer][:server_base] = node[:drupal][:server][:base]
 end
 
 default[:drupal_developer][:codesniff_user] = 'root'
