@@ -13,10 +13,7 @@ if node[:vampd_developer][:zsh]
   end
 
   file '/root/.zshrc' do
-    owner 'root'
-    group 'root'
-    mode 0755
-    content ::File.open('/root/.oh-my-zsh/templates/zshrc.zsh-template').read
+    content IO.read('/root/.oh-my-zsh/templates/zshrc.zsh-template').read
     action :create
   end
 
