@@ -29,4 +29,10 @@ else
   default[:vampd_developer][:server_base] = node[:drupal][:server][:base]
 end
 
-default[:drupal_developer][:codesniff_user] = 'root'
+
+default[:vampd_developer][:copy] = {}
+default[:vampd_developer][:user_groups] = {}
+default[:vampd_developer][:zsh] = false
+
+default[:vampd_developer][:codesniff_user] = 'root'
+
