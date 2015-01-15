@@ -10,11 +10,19 @@ if node[:vampd_developer][:zsh]
     repository 'http://github.com/robbyrussell/oh-my-zsh.git'
     reference 'master'
     action :sync
+    notifies :run, "bash[copy zshrc]", :immediately
   end
 
-  file '/root/.zshrc' do
-    content IO.read('/root/.oh-my-zsh/templates/zshrc.zsh-template').read
-    action :create
+  bash 'copy zshrc' do
+    user 'root'
+    cmd = 'cp /root/.oh-my-zsh/templates/zshrc.zsh-template /root/.zshrc'
+    code <<-EOH
+      set -x
+      set -e
+      #{cmd}
+    EOH
+    action :nothing
+    notifies :run, 'bash[Change Shell to Oh-my-zsh]', :immediately
   end
 
   bash 'Change Shell to Oh-my-zsh' do
@@ -25,5 +33,6 @@ if node[:vampd_developer][:zsh]
       set -e
       #{cmd}
     EOH
+    action :nothing
   end
 end
