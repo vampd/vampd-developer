@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: skeleton
+# Cookbook Name:: vampd-developer
 # Attributes:: default
 #
-# Copyright (C) YEAR YOUR_NAME <YOUR_EMAIL>
+# Copyright (C) 2015 Alex Knoll (arknoll@gmail.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,12 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-default[:vampd_developer][:xdebug] = false
-default[:vampd_developer][:phpmyadmin] = false
-default[:vampd_developer][:xhprof] = false
-default[:vampd_developer][:xhprof_io] = false
-default[:vampd_developer][:percona_toolkit] = false
 
 if node[:drupal][:server][:base].nil?
   default[:vampd_developer][:server_base] = '/srv/www'

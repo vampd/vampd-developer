@@ -1,12 +1,12 @@
 Drupal Developer
 ================
 
-This cookbook adds developer friendly tools for the drupal-lamp project.
+This cookbook adds developer friendly tools for the vampd project.
 
 Requirements
 ------------
 
-This cookbook is designed to work with drupal-lamp https://github.com/newmediadenver/drupal-lamp
+This cookbook is designed to work with vampd https://github.com/vampd/vampd
 
 ### Platform:
 
@@ -15,15 +15,6 @@ Ubuntu
 ### Cookbooks:
 
 php
-
-Attributes
-----------
-````
-"vampd_developer" {
-  "xdebug": false,
-  "phpmyadmin": false
-}
-````
 
 Recipes
 -------
@@ -68,14 +59,14 @@ Adds zsh for the root user.
 
 Usage
 -----
-To get it working with drupal-lamp:
-* Open Berksfile in your drupal-lamp directory and place the following line in there
+To get it working with vampd:
+* Open Berksfile in your vampd directory and place the following line in there
 ````
-cookbook "drupal-developer", git: "https://github.com/arknoll/drupal-developer", branch: "master"
+cookbook "vampd-developer", git: "https://github.com/vampd/vampd-developer", branch: "master"
 ````
-* Open chef/roles/drupal_lamp.rb in your drupal-lamp directory and add "recipe[drupal-developer]", to the end of env_run_lists run list array
+* Open chef/roles/base.json in your vampd directory and add "recipe[vampd-developer::RECIPE]", to the end of env_run_lists run list array
 
-* Add and configure the attributes above to your drupal_lamp.json file.
+* Add and configure any attributes above to your chef/environments/environment.json file.
 
 * run either 'vagrant up' or 'vagrant provision'
 
@@ -84,8 +75,6 @@ When phpmyadmin is set to true, phpmyadmin will be installed on your server. To 
 
 Testing
 -------
-
-[![Build Status](https://travis-ci.org/arknoll/drupal-developer.png?branch=master)](https://travis-ci.org/arknoll/drupal-developer)
 
 The cookbook provides the following Rake tasks for testing:
 
