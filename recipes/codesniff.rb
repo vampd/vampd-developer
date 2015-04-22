@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: drupal-developer
+# Cookbook Name:: vampd-developer
 # Recipe:: codesniff
 #
 # Copyright (C) 2014 Alex Knoll <arknoll@gmail.com>

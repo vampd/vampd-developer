@@ -1,5 +1,5 @@
-site :opscode
+site "https://supermarket.chef.io"
 
 metadata
 
-cookbook 'php', '~> 1.2.6'
+cookbook 'php', '~> 1.5.0'
